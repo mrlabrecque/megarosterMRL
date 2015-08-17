@@ -7,8 +7,9 @@ var Megaroster = function() {
       var student_name = $(this.student_name).val();
       self.students.push(student_name);
       $('#students').append('<li class="list-group-item">' + student_name + '</li>');
-      this.student_name.focus();
-      this.student_name.select();
+      $(this.student_name)
+        .focus()
+        .val(' ');
     });
   };
 };
